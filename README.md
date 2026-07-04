@@ -1,7 +1,9 @@
 # -_multiplicar_una_lista_de_10_numeros_almacenar_resultados_MySQL_- :.
 # Proyecto Java 21 + JDBC + MySQL:
 
-<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/60f95cb0-247a-444d-8fac-644931e5d1c6" />  
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/60f95cb0-247a-444d-8fac-644931e5d1c6" />    
+
+<img width="2551" height="1037" alt="image" src="https://github.com/user-attachments/assets/258bde3a-2382-42b2-9536-370b2a538cc6" />    
 
 ```
 
