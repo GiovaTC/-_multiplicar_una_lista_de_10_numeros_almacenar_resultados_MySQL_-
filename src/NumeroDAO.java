@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 public class NumeroDAO {
 
+
     public void guardar(Numero numero) {
 
         String sql =
@@ -27,7 +28,7 @@ public class NumeroDAO {
         String sql =
                 "SELECT * FROM numeros";
 
-        try (Connection con = ConexionBD.conectar();
+        try(Connection con = ConexionBD.conectar();
              PreparedStatement ps = con.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
 
@@ -45,5 +46,5 @@ public class NumeroDAO {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }   
+    }
 }

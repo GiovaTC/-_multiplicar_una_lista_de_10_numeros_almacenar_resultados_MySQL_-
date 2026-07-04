@@ -1,15 +1,39 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Principal {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Principal {
+
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        NumeroDAO dao = new NumeroDAO();
+
+        List<Double> lista = new ArrayList<>();
+
+        System.out.println("INGRESE 10 NUMEROS");
+
+        for(int i=1; i<=10;i++) {
+            System.out.print("Numero " + i + ": ");
+
+            lista.add(teclado.nextDouble());
         }
+
+        System.out.println();
+        System.out.println("===== RESULTADOS =====");
+
+        for(Double numero : lista) {
+            double resultado = numero * 2;
+
+            System.out.println(numero + " x 2 = " + resultado);
+
+            dao.guardar(
+                    new Numero(numero, resultado)
+            );
+        }
+
+        dao.mostrarDatos();
+        teclado.close();
     }
 }
