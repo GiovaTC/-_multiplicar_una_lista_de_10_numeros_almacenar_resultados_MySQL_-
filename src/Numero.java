@@ -35,5 +35,5 @@ public class Numero {
 
     public void setResultado(double resultado) {
         this.resultado = resultado;
-    }   
+    }
 }
